@@ -1,0 +1,36 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Problema
+    /*
+    Faça um script que peça para o usuário informar a quantidade de horas trabalhadas semanalmente e quanto que recebe por hora trabalhada.
+    Se o total de horas trabalhadas for até 45 horas (inclusive), não haverá adicional.
+    Se o total de horas trabalhadas for até 60 horas (inclusive), haverá adicional de 20%.
+    Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
+    Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
+    */
+
+    //Entrada
+const horas = Number(prompt("Informe o total de horas trabalhadas"))
+const valor = Number(prompt("Informe o valor recebido por hora"))
+    //Processamento
+
+let total = valor * horas
+let valorHoras = valor
+if(horas <= 45){
+    document.write(`Seu salario semanal é R$${total.toFixed(2)}, e recebeu R$${valor.toFixed(2)} pelas horas trabalhadas`)
+}
+else if(horas <= 60){
+    total = total + (total * 0.2)
+    valorHoras = valorHoras + (valorHoras * 0.2)
+    document.write(`Seu salario semanal é R$${total.toFixed(2)}, e recebeu R$${valorHoras.toFixed(2)} pelas horas trabalhadas`)
+}
+else {
+    total = total + (total * 0.3)
+    valorHoras = valorHoras + (valorHoras * 0.3)
+    document.write(`Seu salario semanal é R$${total.toFixed(2)}, e recebeu R$${valorHoras.toFixed(2)} pelas horas trabalhadas`)
+}
+
+    //Saída
+
+    
+</script>

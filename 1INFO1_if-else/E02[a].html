@@ -1,0 +1,37 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Problema
+    /*
+    Faça um script que peça para o usuário informar quantas linhas de código terá o programa que deseja desenvolver e quantos if-else o programa terá.
+    Considere que cada linha equivale a UM PONTO (1)
+    Se não ultrapassar 30 linhas (inclusive), o nível de dificuldade será "Aprendiz"
+    Se não ultrapassar 50 linhas (inclusive), o nível de dificuldade será "Em evolução"
+    Se não ultrapassar 70 linhas (inclusive), o nível de dificuldade será "Estagiário"
+    Caso ultrapasse 70 linhas, o nível de dificuldade será "Júnior"
+    Porém, a cada if-else que o programa terá, serão adicionados 5 pontos ao total de pontos contabilizados por linha.
+    Apresente em tela a quantidade de pontos somados e o nível de difuldade do programa que será desenvolvido.
+    */
+
+    //Entrada
+    const linhas = parseInt(prompt("Informe o total de linhas"))
+    const ifs = parseInt(prompt("Informe o total de IFs e ELSEs"))
+    //Processamento
+    const totalPontos = linhas + (ifs * 5)
+    //Saída
+    if (totalPontos <= 30){
+        document.write(`O total de pontos é ${totalPontos}<br>`)
+        document.write("Aprendiz")
+    }
+    else if (totalPontos <= 50){
+        document.write(`O total de pontos é ${totalPontos}<br>`)
+        document.write("Em evolução")
+    }
+    else if (totalPontos <= 70){
+        document.write(`O total de pontos é ${totalPontos}<br>`)
+        document.write("Estagiário")
+    }
+    else{
+        document.write(`O total de pontos é ${totalPontos}<br>`)
+        document.write("Júnior")
+    }
+</script>

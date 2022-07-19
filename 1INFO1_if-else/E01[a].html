@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Problema
+    /*
+    Faça um script que peça para o usuário informar o preço do litro do combustível e a quantidade de litros utilizados para se deslocar para o trabalho diariamente.
+    Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
+    Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
+    */
+
+    //Entrada
+const precoCombustivel = Number(prompt("Informe o valor do combustivel"))
+const litrosUtilizados = Number(prompt("Informe a qauntidade de litros utilizados diariamente"))
+const custoTransPubli = Number(prompt("Informe valor gasto de transporte publico diario"))
+    //Processamento
+const gastoCombustivel = litrosUtilizados * precoCombustivel
+
+    //Saída
+if(gastoCombustivel > custoTransPubli){
+    document.write(`Compensa Utilizar o Transporte Público, gastando diariamente R$${custoTransPubli.toFixed(2)}`)
+}
+    else{
+        document.write(`Compensa utilizar um veiculo próprio, pois seu gasto com combustivel diario é R$${custoTransPubli.toFixed(2)}`)
+    }
+</script>
